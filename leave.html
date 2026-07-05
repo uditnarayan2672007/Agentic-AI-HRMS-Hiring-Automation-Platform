@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | Leave Management</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/leave.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="recruitment.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Recruitment
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    AI Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="employees.html">
+                    <i class="fa-solid fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="payroll.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    Payroll
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="leave.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Leave
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-comments"></i>
+                    HR Assistant
+                </a>
+            </li>
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= Topbar ================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Leave Management</h1>
+
+                <p>Manage employee leave requests with AI-powered insights</p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <input
+                    type="text"
+                    placeholder="Search Employee...">
+
+                <button class="apply-btn">
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                    Apply Leave
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Statistics ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h2>84</h2>
+
+                <p>Total Requests</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>62</h2>
+
+                <p>Approved</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-hourglass-half"></i>
+
+                <h2>16</h2>
+
+                <p>Pending</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-circle-xmark"></i>
+
+                <h2>6</h2>
+
+                <p>Rejected</p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Leave Requests ================= -->
+
+        <section class="leave-section">
+
+            <div class="leave-table">
+
+                <div class="section-title">
+
+                    <h2>Leave Requests</h2>
+
+                    <button>Approve All</button>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=11">
+
+                                    <div>
+
+                                        <h4>Rahul Sharma</h4>
+
+                                        <small>Engineering</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Casual Leave</td>
+
+                            <td>08 Jul 2026</td>
+
+                            <td>10 Jul 2026</td>
+
+                            <td>3 Days</td>
+
+                            <td>
+
+                                <span class="status pending">
+
+                                    Pending
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="approve-btn">Approve</button>
+
+                                <button class="reject-btn">Reject</button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=32">
+
+                                    <div>
+
+                                        <h4>Priya Das</h4>
+
+                                        <small>Human Resources</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Sick Leave</td>
+
+                            <td>05 Jul 2026</td>
+
+                            <td>06 Jul 2026</td>
+
+                            <td>2 Days</td>
+
+                            <td>
+
+                                <span class="status approved">
+
+                                    Approved
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="view-btn">View</button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=15">
+
+                                    <div>
+
+                                        <h4>Amit Roy</h4>
+
+                                        <small>Engineering</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Earned Leave</td>
+
+                            <td>12 Jul 2026</td>
+
+                            <td>16 Jul 2026</td>
+
+                            <td>5 Days</td>
+
+                            <td>
+
+                                <span class="status rejected">
+
+                                    Rejected
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="view-btn">View</button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ===== Leave Part 2 Starts Here ===== -->
+                 <!-- ================= AI Leave Insights + Leave Analytics ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- AI Leave Insights -->
+
+            <div class="insights-card">
+
+                <div class="section-title">
+
+                    <h2>🤖 AI Leave Insights</h2>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <div>
+
+                        <h4>Leave Trend</h4>
+
+                        <p>Engineering department has 18% higher leave requests this month.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <div>
+
+                        <h4>Abnormal Pattern</h4>
+
+                        <p>Two employees have taken consecutive leave for more than 10 days.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <h4>Workforce Availability</h4>
+
+                        <p>92% workforce will be available next week.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <div>
+
+                        <h4>AI Recommendation</h4>
+
+                        <p>Approve pending leave before payroll processing to avoid conflicts.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Leave Analytics -->
+
+            <div class="analytics-card">
+
+                <div class="section-title">
+
+                    <h2>📊 Leave Analytics</h2>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Casual Leave</span>
+
+                    <strong>35%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar casual"></div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Sick Leave</span>
+
+                    <strong>28%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar sick"></div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Earned Leave</span>
+
+                    <strong>22%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar earned"></div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Work From Home</span>
+
+                    <strong>15%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar wfh"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Team Availability + Quick Actions ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- Team Availability -->
+
+            <div class="availability-card">
+
+                <div class="section-title">
+
+                    <h2>👥 Team Availability</h2>
+
+                </div>
+
+                <div class="availability-item">
+
+                    <span>Available Today</span>
+
+                    <strong>232 Employees</strong>
+
+                </div>
+
+                <div class="availability-item">
+
+                    <span>On Leave</span>
+
+                    <strong>11 Employees</strong>
+
+                </div>
+
+                <div class="availability-item">
+
+                    <span>Working Remotely</span>
+
+                    <strong>26 Employees</strong>
+
+                </div>
+
+                <div class="availability-item">
+
+                    <span>Upcoming Leaves</span>
+
+                    <strong>14 Employees</strong>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <div class="section-title">
+
+                    <h2>⚡ Quick Actions</h2>
+
+                </div>
+
+                <button>
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                    Apply Leave
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Approve Requests
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Export Report
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    View Calendar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Recent Activity ================= -->
+
+        <section class="activity-card">
+
+            <div class="section-title">
+
+                <h2>📅 Recent Activity</h2>
+
+            </div>
+
+            <ul class="activity-list">
+
+                <li>✅ Rahul Sharma submitted a Casual Leave request.</li>
+
+                <li>🎉 Priya Das's Sick Leave was approved.</li>
+
+                <li>❌ Amit Roy's Earned Leave request was rejected.</li>
+
+                <li>🤖 AI predicted a high leave trend for next week.</li>
+
+                <li>📊 Monthly leave report generated successfully.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 HRGenie AI | Leave Management Module
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/leave.js"></script>
+
+</body>
+
+</html>

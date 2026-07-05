@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | HR Assistant</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/chatbot.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="recruitment.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Recruitment
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    AI Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="employees.html">
+                    <i class="fa-solid fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="payroll.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    Payroll
+                </a>
+            </li>
+
+            <li>
+                <a href="leave.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Leave
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-comments"></i>
+                    HR Assistant
+                </a>
+            </li>
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= Topbar ================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>AI HR Assistant</h1>
+
+                <p>Ask anything about HR, payroll, leave, attendance or company policies.</p>
+
+            </div>
+
+            <div class="assistant-status">
+
+                <span class="online-dot"></span>
+
+                AI Assistant Online
+
+            </div>
+
+        </header>
+
+        <!-- ================= Top Cards ================= -->
+
+        <section class="top-grid">
+
+            <!-- Employee Profile -->
+
+            <div class="profile-card">
+
+                <div class="card-header">
+
+                    <h2>Employee Profile</h2>
+
+                </div>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/120?img=11">
+
+                    <h3>Rahul Sharma</h3>
+
+                    <p>Frontend Developer</p>
+
+                </div>
+
+                <div class="profile-info">
+
+                    <div>
+
+                        <span>Employee ID</span>
+
+                        <strong>EMP101</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Department</span>
+
+                        <strong>Engineering</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Leave Balance</span>
+
+                        <strong>12 Days</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Attendance</span>
+
+                        <strong>97%</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI Summary -->
+
+            <div class="summary-card">
+
+                <div class="card-header">
+
+                    <h2>AI Summary</h2>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <div>
+
+                        <h4>Pending Leave</h4>
+
+                        <p>1 Request Waiting</p>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    <div>
+
+                        <h4>Next Payroll</h4>
+
+                        <p>31 July 2026</p>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <div>
+
+                        <h4>Attendance</h4>
+
+                        <p>Excellent Performance</p>
+
+                    </div>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <div>
+
+                        <h4>AI Suggestion</h4>
+
+                        <p>Use your remaining casual leave before month end.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Chat ================= -->
+
+        <section class="chat-section">
+
+            <div class="chat-header">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <h2>HRGenie AI Assistant</h2>
+
+            </div>
+
+            <div class="chat-box" id="chatBox">
+
+                <div class="message bot">
+
+                    <div class="bubble">
+
+                        👋 Hello! I'm your HRGenie AI Assistant.
+
+                        <br><br>
+
+                        I can help you with:
+
+                        <ul>
+
+                            <li>Leave Requests</li>
+
+                            <li>Payroll</li>
+
+                            <li>Attendance</li>
+
+                            <li>Company Policies</li>
+
+                            <li>Employee Benefits</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask your HR question...">
+
+                <button id="sendBtn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ===== HR Assistant Part 2 Starts Here ===== -->
+                 <!-- ================= Suggested Questions ================= -->
+
+        <section class="bottom-grid">
+
+            <div class="suggestions-card">
+
+                <div class="card-header">
+
+                    <h2>💡 Suggested Questions</h2>
+
+                </div>
+
+                <div class="suggestions">
+
+                    <button class="suggestion-btn">
+                        How many leave days do I have?
+                    </button>
+
+                    <button class="suggestion-btn">
+                        When is my next salary?
+                    </button>
+
+                    <button class="suggestion-btn">
+                        Show attendance summary.
+                    </button>
+
+                    <button class="suggestion-btn">
+                        What is the company's work from home policy?
+                    </button>
+
+                    <button class="suggestion-btn">
+                        How do I apply for leave?
+                    </button>
+
+                    <button class="suggestion-btn">
+                        Show this month's payroll details.
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <div class="card-header">
+
+                    <h2>⚡ Quick Actions</h2>
+
+                </div>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                    Apply Leave
+
+                </button>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-money-check-dollar"></i>
+
+                    Download Payslip
+
+                </button>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    Contact HR
+
+                </button>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                    Raise Support Ticket
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Recent AI Activity ================= -->
+
+        <section class="activity-card">
+
+            <div class="card-header">
+
+                <h2>📜 Recent AI Activity</h2>
+
+            </div>
+
+            <ul class="activity-list">
+
+                <li>🤖 Answered leave balance query.</li>
+
+                <li>📄 Generated payroll summary.</li>
+
+                <li>📅 Guided employee through leave application.</li>
+
+                <li>📊 Displayed attendance report.</li>
+
+                <li>💬 Explained company leave policy.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 HRGenie AI | HR Assistant Module
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/chatbot.js"></script>
+
+</body>
+
+</html>

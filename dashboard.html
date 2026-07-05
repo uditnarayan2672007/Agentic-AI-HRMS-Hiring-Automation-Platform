@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRGenie AI | Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= Sidebar ================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <div>
+                    <h2>HRGenie</h2>
+                    <span>AI HRMS</span>
+                </div>
+
+            </div>
+
+            <ul class="menu">
+
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="recruitment.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Recruitment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="interview.html">
+                        <i class="fa-solid fa-microphone"></i>
+                        AI Interview
+                    </a>
+                </li>
+
+                <li>
+                    <a href="employees.html">
+                        <i class="fa-solid fa-users"></i>
+                        Employees
+                    </a>
+                </li>
+
+                <li>
+                    <a href="payroll.html">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        Payroll
+                    </a>
+                </li>
+
+                <li>
+                    <a href="leave.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Leave
+                    </a>
+                </li>
+
+                <li>
+                    <a href="chatbot.html">
+                        <i class="fa-solid fa-robot"></i>
+                        HR Assistant
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Analytics
+                    </a>
+                </li>
+
+            </ul>
+            <div class="logout">
+
+                <button>
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= Main ================= -->
+
+        <main class="main-content">
+
+            <!-- ================= Top Bar ================= -->
+
+            <header class="topbar">
+
+                <div class="left">
+
+                    <h1>Dashboard</h1>
+
+                    <p>Welcome back, HR Admin 👋</p>
+
+                </div>
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" placeholder="Search employees, candidates...">
+
+                </div>
+
+                <div class="top-icons">
+
+                    <button>
+
+                        <i class="fa-regular fa-bell"></i>
+
+                    </button>
+
+                    <button>
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </button>
+
+                    <div class="profile">
+
+                        <img src="https://i.pravatar.cc/100?img=12" alt="profile">
+
+                        <div>
+
+                            <h4>Admin</h4>
+
+                            <small>HR Manager</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- ================= KPI Cards ================= -->
+
+            <section class="cards">
+
+                <div class="card blue">
+
+                    <div>
+
+                        <h4>Total Employees</h4>
+
+                        <h2>248</h2>
+
+                        <span>+12 this month</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div class="card green">
+
+                    <div>
+
+                        <h4>New Candidates</h4>
+
+                        <h2>56</h2>
+
+                        <span>18 shortlisted</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div class="card orange">
+
+                    <div>
+
+                        <h4>Payroll Status</h4>
+
+                        <h2>Completed</h2>
+
+                        <span>June 2026</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <div class="card red">
+
+                    <div>
+
+                        <h4>Leave Requests</h4>
+
+                        <h2>14</h2>
+
+                        <span>Pending Approval</span>
+
+                    </div>
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+            </section>
+
+            <!-- ================= Charts Section ================= -->
+
+            <section class="grid-layout">
+
+                <!-- Left -->
+
+                <div class="chart-card">
+
+                    <div class="title">
+
+                        <h3>Hiring Overview</h3>
+
+                        <button>Monthly</button>
+
+                    </div>
+
+                    <canvas id="hiringChart"></canvas>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="ai-card">
+
+                    <div class="title">
+
+                        <h3>AI Insights</h3>
+
+                    </div>
+
+                    <div class="insight">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <p>
+                            Candidate quality increased by
+                            <strong>18%</strong> this month.
+                        </p>
+
+                    </div>
+
+                    <div class="insight">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <p>
+                            Attendance reached
+                            <strong>96%</strong>.
+                        </p>
+
+                    </div>
+
+                    <div class="insight">
+
+                        <i class="fa-solid fa-circle-exclamation"></i>
+
+                        <p>
+                            Finance department has
+                            <strong>high leave requests.</strong>
+                        </p>
+
+                    </div>
+
+                    <div class="insight">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <p>
+                            AI recommends scheduling
+                            interviews for 8 candidates.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- PART 2 STARTS HERE -->
+            <!-- ================= Bottom Grid ================= -->
+
+            <section class="bottom-grid">
+
+                <!-- ================= Recent Employees ================= -->
+
+                <div class="table-card">
+
+                    <div class="title">
+
+                        <h3>Recent Employees</h3>
+
+                        <button>View All</button>
+
+                    </div>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Employee</th>
+                                <th>Department</th>
+                                <th>Role</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="employee">
+
+                                        <img src="https://i.pravatar.cc/50?img=1">
+
+                                        <div>
+
+                                            <h4>Rahul Sharma</h4>
+
+                                            <small>EMP001</small>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Engineering</td>
+
+                                <td>Frontend Developer</td>
+
+                                <td>
+                                    <span class="status active">
+                                        Active
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="employee">
+
+                                        <img src="https://i.pravatar.cc/50?img=5">
+
+                                        <div>
+
+                                            <h4>Priya Das</h4>
+
+                                            <small>EMP002</small>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Human Resources</td>
+
+                                <td>Recruiter</td>
+
+                                <td>
+
+                                    <span class="status active">
+
+                                        Active
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="employee">
+
+                                        <img src="https://i.pravatar.cc/50?img=10">
+
+                                        <div>
+
+                                            <h4>Amit Roy</h4>
+
+                                            <small>EMP003</small>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Finance</td>
+
+                                <td>Accountant</td>
+
+                                <td>
+
+                                    <span class="status leave">
+
+                                        On Leave
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="employee">
+
+                                        <img src="https://i.pravatar.cc/50?img=15">
+
+                                        <div>
+
+                                            <h4>Sneha Singh</h4>
+
+                                            <small>EMP004</small>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>Marketing</td>
+
+                                <td>Executive</td>
+
+                                <td>
+
+                                    <span class="status active">
+
+                                        Active
+
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- ================= Right Side ================= -->
+
+                <div class="right-column">
+
+                    <!-- Upcoming Interviews -->
+
+                    <div class="mini-card">
+
+                        <div class="title">
+
+                            <h3>Today's Interviews</h3>
+
+                        </div>
+
+                        <div class="interview-item">
+
+                            <h4>09:30 AM</h4>
+
+                            <p>Java Developer - Rahul Sharma</p>
+
+                        </div>
+
+                        <div class="interview-item">
+
+                            <h4>11:00 AM</h4>
+
+                            <p>UI/UX Designer - Priya Das</p>
+
+                        </div>
+
+                        <div class="interview-item">
+
+                            <h4>02:00 PM</h4>
+
+                            <p>Backend Developer - Amit Roy</p>
+
+                        </div>
+
+                        <div class="interview-item">
+
+                            <h4>04:00 PM</h4>
+
+                            <p>HR Executive - Sneha Singh</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Attendance Overview -->
+
+                    <div class="mini-card">
+
+                        <div class="title">
+
+                            <h3>Attendance Overview</h3>
+
+                        </div>
+
+                        <div class="attendance">
+
+                            <div>
+
+                                <h2>96%</h2>
+
+                                <small>Present Today</small>
+
+                            </div>
+
+                            <div>
+
+                                <h2>4%</h2>
+
+                                <small>Absent</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div class="progress-bar"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ======= PART 2B STARTS HERE ======= -->
+            <!-- ================= Bottom Widgets ================= -->
+
+            <section class="widgets">
+
+                <!-- Quick Actions -->
+
+                <div class="widget-card">
+
+                    <div class="title">
+                        <h3>Quick Actions</h3>
+                    </div>
+
+                    <div class="actions">
+
+                        <button>
+                            <i class="fa-solid fa-user-plus"></i>
+                            Add Employee
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-file-arrow-up"></i>
+                            Upload Resume
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            Generate Payroll
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-calendar-plus"></i>
+                            Approve Leave
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Activity Timeline -->
+
+                <div class="widget-card">
+
+                    <div class="title">
+                        <h3>Recent Activities</h3>
+                    </div>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <span class="dot blue"></span>
+                            <div>
+                                <h4>New employee joined</h4>
+                                <p>Rahul Sharma joined the Engineering Team.</p>
+                                <small>10 minutes ago</small>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="dot green"></span>
+                            <div>
+                                <h4>Payroll Generated</h4>
+                                <p>Payroll processed successfully for June.</p>
+                                <small>1 hour ago</small>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="dot orange"></span>
+                            <div>
+                                <h4>Interview Completed</h4>
+                                <p>AI Interview completed for UI/UX Designer.</p>
+                                <small>2 hours ago</small>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="dot red"></span>
+                            <div>
+                                <h4>Leave Request</h4>
+                                <p>Priya Das applied for 2 days leave.</p>
+                                <small>Today</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+
+            <footer class="footer">
+
+                <p>
+                    © 2026 HRGenie AI • Smart HRMS & Hiring Automation Platform
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Dashboard JavaScript -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

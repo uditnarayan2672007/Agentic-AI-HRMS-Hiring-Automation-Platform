@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | AI Interview</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/interview.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="recruitment.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Recruitment
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    AI Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="employees.html">
+                    <i class="fa-solid fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="payroll.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    Payroll
+                </a>
+            </li>
+
+            <li>
+                <a href="leave.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Leave
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-comments"></i>
+                    HR Assistant
+                </a>
+            </li>
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>AI Interview Dashboard</h1>
+
+                <p>AI-powered first round interview system</p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <input
+                    type="text"
+                    placeholder="Search Candidate...">
+
+                <button class="start-btn">
+
+                    <i class="fa-solid fa-play"></i>
+
+                    Start Interview
+
+                </button>
+
+                <button class="end-btn">
+
+                    <i class="fa-solid fa-stop"></i>
+
+                    End Interview
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Candidate Info -->
+
+        <section class="candidate-card">
+
+            <div class="candidate-profile">
+
+                <img src="https://i.pravatar.cc/120?img=11">
+
+                <div>
+
+                    <h2>Rahul Sharma</h2>
+
+                    <p>Frontend Developer</p>
+
+                    <small>Experience : 4 Years</small>
+
+                </div>
+
+            </div>
+
+            <div class="candidate-stats">
+
+                <div>
+
+                    <h3>94%</h3>
+
+                    <span>AI Match</span>
+
+                </div>
+
+                <div>
+
+                    <h3>5</h3>
+
+                    <span>Projects</span>
+
+                </div>
+
+                <div>
+
+                    <h3>12</h3>
+
+                    <span>Skills</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Camera + Chat -->
+
+        <section class="interview-grid">
+
+            <!-- Camera -->
+
+            <div class="camera-card">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        Live Interview
+
+                    </h2>
+
+                    <span class="recording">
+
+                        🔴 Recording
+
+                    </span>
+
+                </div>
+
+                <div class="camera-preview">
+
+                    <i class="fa-solid fa-video"></i>
+
+                    <h3>Camera Preview</h3>
+
+                </div>
+
+                <div class="camera-controls">
+
+                    <button>
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </button>
+
+                    <button>
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                    </button>
+
+                    <button>
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- AI Chat -->
+
+            <div class="chat-card">
+
+                <div class="section-title">
+
+                    <h2>
+
+                        AI Interview Chat
+
+                    </h2>
+
+                </div>
+
+                <div class="chat-box">
+
+                    <div class="ai-message">
+
+                        🤖 Hello Rahul, introduce yourself.
+
+                    </div>
+
+                    <div class="user-message">
+
+                        Hello, I am Rahul Sharma, a Full Stack Developer with 4 years of experience.
+
+                    </div>
+
+                    <div class="ai-message">
+
+                        Explain the Virtual DOM in React.
+
+                    </div>
+
+                    <div class="user-message">
+
+                        Virtual DOM improves rendering performance by updating only changed components.
+
+                    </div>
+
+                    <div class="ai-message">
+
+                        Great! Tell me about your biggest project.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===== AI Interview Part 2 Starts Here ===== -->
+                 <!-- ================= AI Performance ================= -->
+
+        <section class="performance-grid">
+
+            <!-- AI Scores -->
+
+            <div class="score-card">
+
+                <div class="section-title">
+                    <h2>AI Performance Analysis</h2>
+                </div>
+
+                <div class="score-item">
+
+                    <div class="score-header">
+                        <span>Communication</span>
+                        <strong>92%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar communication"></div>
+                    </div>
+
+                </div>
+
+                <div class="score-item">
+
+                    <div class="score-header">
+                        <span>Technical Knowledge</span>
+                        <strong>95%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar technical"></div>
+                    </div>
+
+                </div>
+
+                <div class="score-item">
+
+                    <div class="score-header">
+                        <span>Problem Solving</span>
+                        <strong>90%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar problem"></div>
+                    </div>
+
+                </div>
+
+                <div class="score-item">
+
+                    <div class="score-header">
+                        <span>Confidence</span>
+                        <strong>88%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar confidence"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI Recommendation -->
+
+            <div class="recommendation-card">
+
+                <div class="section-title">
+                    <h2>🤖 AI Recommendation</h2>
+                </div>
+
+                <div class="recommendation">
+
+                    <h3>⭐⭐⭐⭐⭐ Highly Recommended</h3>
+
+                    <ul>
+
+                        <li>✅ Excellent React & JavaScript knowledge</li>
+
+                        <li>✅ Strong communication skills</li>
+
+                        <li>✅ Good problem-solving ability</li>
+
+                        <li>✅ Confident during interview</li>
+
+                        <li>⭐ Recommended for HR Round</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Timeline + Summary ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- Timeline -->
+
+            <div class="timeline-card">
+
+                <div class="section-title">
+
+                    <h2>Interview Timeline</h2>
+
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span class="dot"></span>
+                        <div>
+                            <h4>10:00 AM</h4>
+                            <p>Interview Started</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="dot"></span>
+                        <div>
+                            <h4>10:05 AM</h4>
+                            <p>Technical Round</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="dot"></span>
+                        <div>
+                            <h4>10:18 AM</h4>
+                            <p>Behavioral Questions</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="dot"></span>
+                        <div>
+                            <h4>10:30 AM</h4>
+                            <p>Interview Completed</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI Summary -->
+
+            <div class="summary-card">
+
+                <div class="section-title">
+
+                    <h2>📝 AI Summary</h2>
+
+                </div>
+
+                <div class="summary">
+
+                    <p>
+
+                        Rahul Sharma demonstrated excellent technical knowledge in
+                        React, JavaScript and frontend development.
+
+                    </p>
+
+                    <p>
+
+                        Communication was clear and confident throughout the
+                        interview.
+
+                    </p>
+
+                    <p>
+
+                        Problem-solving skills were above average, and the AI
+                        recommends moving the candidate to the HR round.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 HRGenie AI | AI Interview Module
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/interview.js"></script>
+
+</body>
+
+</html>
