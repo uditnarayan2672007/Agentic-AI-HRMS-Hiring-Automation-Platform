@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | Employee Management</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/employees.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="recruitment.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Recruitment
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    AI Interview
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="employees.html">
+                    <i class="fa-solid fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="payroll.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    Payroll
+                </a>
+            </li>
+
+            <li>
+                <a href="leave.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Leave
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-comments"></i>
+                    HR Assistant
+                </a>
+            </li>
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Employee Management</h1>
+
+                <p>Manage employees, departments and attendance</p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <input
+                    type="text"
+                    placeholder="Search Employee...">
+
+                <button class="add-btn">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add Employee
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Statistics ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2>248</h2>
+
+                <p>Total Employees</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <h2>232</h2>
+
+                <p>Present Today</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-clock"></i>
+
+                <h2>11</h2>
+
+                <p>On Leave</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h2>8</h2>
+
+                <p>Departments</p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Employee Table ================= -->
+
+        <section class="employee-section">
+
+            <div class="employee-table">
+
+                <div class="section-title">
+
+                    <h2>Employee Directory</h2>
+
+                    <button>View All</button>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Position</th>
+                            <th>Status</th>
+                            <th>Performance</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=11">
+
+                                    <div>
+
+                                        <h4>Rahul Sharma</h4>
+
+                                        <small>rahul@gmail.com</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Engineering</td>
+
+                            <td>Frontend Developer</td>
+
+                            <td>
+
+                                <span class="status present">
+
+                                    Present
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                ⭐⭐⭐⭐⭐
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=32">
+
+                                    <div>
+
+                                        <h4>Priya Das</h4>
+
+                                        <small>priya@gmail.com</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Human Resources</td>
+
+                            <td>HR Manager</td>
+
+                            <td>
+
+                                <span class="status leave">
+
+                                    Leave
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                ⭐⭐⭐⭐☆
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=15">
+
+                                    <div>
+
+                                        <h4>Amit Roy</h4>
+
+                                        <small>amit@gmail.com</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>Engineering</td>
+
+                            <td>Backend Developer</td>
+
+                            <td>
+
+                                <span class="status present">
+
+                                    Present
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                ⭐⭐⭐⭐☆
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Employee Cards ================= -->
+
+        <section class="profile-grid">
+
+            <div class="profile-card">
+
+                <img src="https://i.pravatar.cc/120?img=11">
+
+                <h3>Rahul Sharma</h3>
+
+                <p>Frontend Developer</p>
+
+                <span>Engineering Department</span>
+
+                <div class="profile-buttons">
+
+                    <button>Profile</button>
+
+                    <button>Message</button>
+
+                </div>
+
+            </div>
+
+            <div class="profile-card">
+
+                <img src="https://i.pravatar.cc/120?img=32">
+
+                <h3>Priya Das</h3>
+
+                <p>HR Manager</p>
+
+                <span>Human Resources</span>
+
+                <div class="profile-buttons">
+
+                    <button>Profile</button>
+
+                    <button>Message</button>
+
+                </div>
+
+            </div>
+
+            <div class="profile-card">
+
+                <img src="https://i.pravatar.cc/120?img=15">
+
+                <h3>Amit Roy</h3>
+
+                <p>Backend Developer</p>
+
+                <span>Engineering Department</span>
+
+                <div class="profile-buttons">
+
+                    <button>Profile</button>
+
+                    <button>Message</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ===== Employees Part 2 Starts Here ===== -->
+                 <!-- ================= Performance & Attendance ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- Performance Overview -->
+
+            <div class="performance-card">
+
+                <div class="section-title">
+
+                    <h2>Performance Overview</h2>
+
+                </div>
+
+                <div class="performance-item">
+
+                    <span>Engineering Team</span>
+
+                    <strong>95%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar engineering"></div>
+                    </div>
+
+                </div>
+
+                <div class="performance-item">
+
+                    <span>HR Team</span>
+
+                    <strong>88%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar hr"></div>
+                    </div>
+
+                </div>
+
+                <div class="performance-item">
+
+                    <span>Marketing Team</span>
+
+                    <strong>81%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar marketing"></div>
+                    </div>
+
+                </div>
+
+                <div class="performance-item">
+
+                    <span>Finance Team</span>
+
+                    <strong>91%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar finance"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Attendance -->
+
+            <div class="attendance-card">
+
+                <div class="section-title">
+
+                    <h2>Today's Attendance</h2>
+
+                </div>
+
+                <div class="attendance-item">
+
+                    <span>Present</span>
+
+                    <strong>232</strong>
+
+                </div>
+
+                <div class="attendance-item">
+
+                    <span>Absent</span>
+
+                    <strong>5</strong>
+
+                </div>
+
+                <div class="attendance-item">
+
+                    <span>On Leave</span>
+
+                    <strong>11</strong>
+
+                </div>
+
+                <div class="attendance-item">
+
+                    <span>Late</span>
+
+                    <strong>8</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Birthday & Quick Actions ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- Birthdays -->
+
+            <div class="birthday-card">
+
+                <div class="section-title">
+
+                    <h2>🎂 Upcoming Birthdays</h2>
+
+                </div>
+
+                <div class="birthday-person">
+
+                    <img src="https://i.pravatar.cc/60?img=12">
+
+                    <div>
+
+                        <h4>Ananya Sen</h4>
+
+                        <small>Tomorrow</small>
+
+                    </div>
+
+                </div>
+
+                <div class="birthday-person">
+
+                    <img src="https://i.pravatar.cc/60?img=25">
+
+                    <div>
+
+                        <h4>Rohit Gupta</h4>
+
+                        <small>3 Days</small>
+
+                    </div>
+
+                </div>
+
+                <div class="birthday-person">
+
+                    <img src="https://i.pravatar.cc/60?img=40">
+
+                    <div>
+
+                        <h4>Sneha Roy</h4>
+
+                        <small>Next Week</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <div class="section-title">
+
+                    <h2>Quick Actions</h2>
+
+                </div>
+
+                <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Add Employee
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Mark Attendance
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-file-export"></i>
+                    Export Report
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-envelope"></i>
+                    Send Announcement
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 HRGenie AI | Employee Management Module
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/employees.js"></script>
+
+</body>
+
+</html>

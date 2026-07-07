@@ -1,0 +1,508 @@
+/* ==========================================
+   HRGenie AI - AI Interview Module
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+/* ================= LAYOUT ================= */
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:260px;
+    height:100%;
+    background:linear-gradient(180deg,#1d4ed8,#2563eb);
+    padding:30px 20px;
+    color:#fff;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.logo i{
+    width:55px;
+    height:55px;
+    background:#fff;
+    color:#2563eb;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo span{
+    font-size:13px;
+    opacity:.8;
+}
+
+/* MENU */
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:10px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.menu li:hover{
+    background:rgba(255,255,255,.15);
+}
+
+.menu li.active{
+    background:#fff;
+}
+
+.menu li.active a{
+    color:#2563eb;
+}
+
+/* ================= MAIN ================= */
+
+.main-content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:35px;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.topbar h1{
+    font-size:32px;
+    color:#1e3a8a;
+}
+
+.topbar p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+.top-actions{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.top-actions input{
+    padding:12px 15px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    width:220px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.start-btn{
+    background:#22c55e;
+    color:#fff;
+    border:none;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.start-btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+.end-btn{
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.end-btn:hover{
+    background:#dc2626;
+    transform:translateY(-3px);
+}
+
+/* ================= CANDIDATE CARD ================= */
+
+.candidate-card{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.candidate-profile{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.candidate-profile img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+
+.candidate-stats{
+    display:flex;
+    gap:30px;
+}
+
+.candidate-stats div{
+    text-align:center;
+}
+
+.candidate-stats h3{
+    color:#2563eb;
+    font-size:22px;
+}
+
+/* ================= INTERVIEW GRID ================= */
+
+.interview-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+/* CAMERA */
+
+.camera-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.recording{
+    color:red;
+    font-weight:600;
+}
+
+.camera-preview{
+    height:280px;
+    border-radius:15px;
+    background:#eef2ff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#2563eb;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.camera-preview i{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.camera-controls{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+}
+
+.camera-controls button{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.camera-controls button:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* CHAT */
+
+.chat-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.chat-box{
+    height:360px;
+    overflow-y:auto;
+    padding-right:10px;
+}
+
+.ai-message,
+.user-message{
+    padding:12px 15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.ai-message{
+    background:#eef2ff;
+    color:#1e3a8a;
+}
+
+.user-message{
+    background:#dcfce7;
+    color:#166534;
+    margin-left:30px;
+}
+
+/* ================= PERFORMANCE ================= */
+
+.performance-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+.score-card,
+.recommendation-card{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.score-item{
+    margin-bottom:15px;
+}
+
+.score-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+}
+
+.progress{
+    height:10px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    border-radius:20px;
+}
+
+.communication{width:92%; background:#2563eb;}
+.technical{width:95%; background:#22c55e;}
+.problem{width:90%; background:#f59e0b;}
+.confidence{width:88%; background:#ef4444;}
+
+/* ================= RECOMMENDATION ================= */
+
+.recommendation ul{
+    list-style:none;
+    margin-top:10px;
+}
+
+.recommendation li{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* ================= TIMELINE + SUMMARY ================= */
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.timeline-card,
+.summary-card{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.timeline-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    background:#2563eb;
+    border-radius:50%;
+    margin-top:6px;
+}
+
+.summary p{
+    margin-bottom:12px;
+    color:#475569;
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    margin-top:25px;
+    text-align:center;
+    padding:15px;
+    background:#fff;
+    border-radius:15px;
+    color:#64748b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1024px){
+
+    .interview-grid,
+    .performance-grid,
+    .bottom-grid{
+        grid-template-columns:1fr;
+    }
+
+    .candidate-card{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .candidate-stats{
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:90px;
+    }
+
+    .main-content{
+        margin-left:90px;
+        width:calc(100% - 90px);
+    }
+
+    .logo div{
+        display:none;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:0;
+        width:100%;
+    }
+
+    .top-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .top-actions input{
+        width:100%;
+    }
+
+}
+
+/* ================= ANIMATION ================= */
+
+.camera-card,
+.chat-card,
+.score-card,
+.recommendation-card,
+.timeline-card,
+.summary-card,
+.candidate-card{
+    animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

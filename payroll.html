@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | Payroll Management</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/payroll.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="recruitment.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Recruitment
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    AI Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="employees.html">
+                    <i class="fa-solid fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="payroll.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    Payroll
+                </a>
+            </li>
+
+            <li>
+                <a href="leave.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Leave
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-comments"></i>
+                    HR Assistant
+                </a>
+            </li>
+
+            <li>
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= Topbar ================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Payroll Management</h1>
+
+                <p>Automated salary processing and payroll insights</p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <input
+                    type="text"
+                    placeholder="Search Employee...">
+
+                <button class="process-btn">
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    Process Payroll
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Statistics ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h2>₹18.6L</h2>
+
+                <p>Total Monthly Payroll</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>232</h2>
+
+                <p>Employees Paid</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2>16</h2>
+
+                <p>Pending Payments</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-gift"></i>
+
+                <h2>₹2.4L</h2>
+
+                <p>Bonus Distributed</p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Payroll Table ================= -->
+
+        <section class="payroll-section">
+
+            <div class="payroll-table">
+
+                <div class="section-title">
+
+                    <h2>Employee Payroll</h2>
+
+                    <button>Generate Payslips</button>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Employee</th>
+                            <th>ID</th>
+                            <th>Department</th>
+                            <th>Basic</th>
+                            <th>Bonus</th>
+                            <th>Tax</th>
+                            <th>Net Salary</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=11">
+
+                                    <div>
+
+                                        <h4>Rahul Sharma</h4>
+
+                                        <small>Frontend Developer</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>EMP101</td>
+
+                            <td>Engineering</td>
+
+                            <td>₹65,000</td>
+
+                            <td>₹5,000</td>
+
+                            <td>₹6,500</td>
+
+                            <td><strong>₹63,500</strong></td>
+
+                            <td>
+
+                                <span class="status paid">
+
+                                    Paid
+
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=32">
+
+                                    <div>
+
+                                        <h4>Priya Das</h4>
+
+                                        <small>HR Manager</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>EMP102</td>
+
+                            <td>Human Resources</td>
+
+                            <td>₹72,000</td>
+
+                            <td>₹4,000</td>
+
+                            <td>₹7,200</td>
+
+                            <td><strong>₹68,800</strong></td>
+
+                            <td>
+
+                                <span class="status pending">
+
+                                    Pending
+
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                <div class="employee-info">
+
+                                    <img src="https://i.pravatar.cc/60?img=15">
+
+                                    <div>
+
+                                        <h4>Amit Roy</h4>
+
+                                        <small>Backend Developer</small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>EMP103</td>
+
+                            <td>Engineering</td>
+
+                            <td>₹70,000</td>
+
+                            <td>₹6,000</td>
+
+                            <td>₹7,000</td>
+
+                            <td><strong>₹69,000</strong></td>
+
+                            <td>
+
+                                <span class="status paid">
+
+                                    Paid
+
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ===== Payroll Part 2 Starts Here ===== -->
+                 <!-- ================= AI Insights + Analytics ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- AI Payroll Insights -->
+
+            <div class="insights-card">
+
+                <div class="section-title">
+
+                    <h2>🤖 AI Payroll Insights</h2>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+
+                        <h4>Payroll Completed</h4>
+
+                        <p>232 salaries processed successfully this month.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <div>
+
+                        <h4>Pending Salaries</h4>
+
+                        <p>16 employees are awaiting payroll approval.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <h4>Salary Growth</h4>
+
+                        <p>Overall payroll increased by 8% compared to last month.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="insight">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <div>
+
+                        <h4>AI Recommendation</h4>
+
+                        <p>Engineering bonus budget can be optimized by 5%.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Payroll Analytics -->
+
+            <div class="analytics-card">
+
+                <div class="section-title">
+
+                    <h2>📊 Payroll Analytics</h2>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Engineering</span>
+
+                    <strong>40%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar engineering"></div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Human Resources</span>
+
+                    <strong>18%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar hr"></div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Marketing</span>
+
+                    <strong>22%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar marketing"></div>
+                    </div>
+
+                </div>
+
+                <div class="analytics-item">
+
+                    <span>Finance</span>
+
+                    <strong>20%</strong>
+
+                    <div class="progress">
+                        <div class="progress-bar finance"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Recent Activity + Quick Actions ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- Recent Activity -->
+
+            <div class="activity-card">
+
+                <div class="section-title">
+
+                    <h2>📅 Recent Payroll Activity</h2>
+
+                </div>
+
+                <ul class="activity-list">
+
+                    <li>✅ Rahul Sharma's salary processed.</li>
+
+                    <li>💰 Engineering bonus approved.</li>
+
+                    <li>📄 Payslips generated for July.</li>
+
+                    <li>🏦 Tax deduction updated.</li>
+
+                    <li>🤖 AI detected 2 payroll anomalies.</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <div class="section-title">
+
+                    <h2>⚡ Quick Actions</h2>
+
+                </div>
+
+                <button>
+
+                    <i class="fa-solid fa-money-check-dollar"></i>
+
+                    Process Payroll
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    Generate Payslips
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Export Excel
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download Report
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 HRGenie AI | Payroll Management Module
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/payroll.js"></script>
+
+</body>
+
+</html>

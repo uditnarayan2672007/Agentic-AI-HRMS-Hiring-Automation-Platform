@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | Analytics Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="css/analytics.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="recruitment.html">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Recruitment
+                </a>
+            </li>
+
+            <li>
+                <a href="interview.html">
+                    <i class="fa-solid fa-microphone"></i>
+                    AI Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="employees.html">
+                    <i class="fa-solid fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="payroll.html">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    Payroll
+                </a>
+            </li>
+
+            <li>
+                <a href="leave.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Leave
+                </a>
+            </li>
+
+            <li>
+                <a href="chatbot.html">
+                    <i class="fa-solid fa-comments"></i>
+                    HR Assistant
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="analytics.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= Topbar ================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Analytics Dashboard</h1>
+
+                <p>AI-powered workforce insights and HR analytics</p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <select id="dateFilter">
+
+                    <option>This Month</option>
+                    <option>Last Month</option>
+                    <option>Last 3 Months</option>
+                    <option>This Year</option>
+
+                </select>
+
+                <button id="exportBtn">
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Export Report
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= KPI Cards ================= -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2 id="employeeCount">245</h2>
+
+                <p>Total Employees</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <h2 id="hiredCount">34</h2>
+
+                <p>New Hires</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <h2 id="payrollCount">$485K</h2>
+
+                <p>Monthly Payroll</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <h2 id="attendanceCount">97%</h2>
+
+                <p>Attendance Rate</p>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Charts Row ================= -->
+
+        <section class="chart-grid">
+
+            <!-- Hiring Analytics -->
+
+            <div class="chart-card">
+
+                <div class="section-title">
+
+                    <h2>📈 Hiring Analytics</h2>
+
+                </div>
+
+                <canvas id="hiringChart"></canvas>
+
+            </div>
+
+            <!-- Employee Growth -->
+
+            <div class="chart-card">
+
+                <div class="section-title">
+
+                    <h2>👥 Employee Growth</h2>
+
+                </div>
+
+                <canvas id="employeeChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- ===== Analytics Part 2 Starts Here ===== -->
+                 <!-- ================= Payroll & Leave Analytics ================= -->
+
+        <section class="chart-grid">
+
+            <!-- Payroll Overview -->
+
+            <div class="chart-card">
+
+                <div class="section-title">
+
+                    <h2>💰 Payroll Overview</h2>
+
+                </div>
+
+                <canvas id="payrollChart"></canvas>
+
+            </div>
+
+            <!-- Leave Trends -->
+
+            <div class="chart-card">
+
+                <div class="section-title">
+
+                    <h2>📅 Leave Trends</h2>
+
+                </div>
+
+                <canvas id="leaveChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- ================= AI Workforce Insights ================= -->
+
+        <section class="insights-section">
+
+            <div class="section-title">
+
+                <h2>🤖 AI Workforce Insights</h2>
+
+            </div>
+
+            <div class="insight-grid">
+
+                <div class="insight-card">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    <h3>Hiring Prediction</h3>
+
+                    <p>
+                        AI predicts the Engineering team will require
+                        <strong>12 new hires</strong> within the next quarter.
+                    </p>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h3>Attendance Trend</h3>
+
+                    <p>
+                        Attendance has improved by
+                        <strong>5.2%</strong> compared to last month.
+                    </p>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <h3>Leave Analysis</h3>
+
+                    <p>
+                        Most leave requests occur on
+                        <strong>Fridays</strong>.
+                    </p>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <i class="fa-solid fa-money-check-dollar"></i>
+
+                    <h3>Payroll Alert</h3>
+
+                    <p>
+                        No payroll anomalies detected for the current month.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Department Summary ================= -->
+
+        <section class="department-summary">
+
+            <div class="section-title">
+
+                <h2>🏢 Department Performance</h2>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Department</th>
+                        <th>Employees</th>
+                        <th>Attendance</th>
+                        <th>Productivity</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Engineering</td>
+                        <td>82</td>
+                        <td>98%</td>
+                        <td>Excellent</td>
+                        <td><span class="status excellent">Excellent</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Human Resources</td>
+                        <td>18</td>
+                        <td>96%</td>
+                        <td>Very Good</td>
+                        <td><span class="status good">Good</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Finance</td>
+                        <td>26</td>
+                        <td>95%</td>
+                        <td>Very Good</td>
+                        <td><span class="status good">Good</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Sales</td>
+                        <td>54</td>
+                        <td>92%</td>
+                        <td>Average</td>
+                        <td><span class="status average">Average</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Marketing</td>
+                        <td>31</td>
+                        <td>94%</td>
+                        <td>Good</td>
+                        <td><span class="status good">Good</span></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- ===== Analytics Part 3 Starts Here ===== -->
+                 <!-- ================= Reports & Quick Actions ================= -->
+
+        <section class="bottom-grid">
+
+            <!-- Recent Reports -->
+
+            <div class="reports-card">
+
+                <div class="section-title">
+
+                    <h2>📄 Recent Reports</h2>
+
+                </div>
+
+                <div class="report-item">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <div>
+
+                        <h4>Monthly HR Report</h4>
+
+                        <p>Generated on 05 July 2026</p>
+
+                    </div>
+
+                    <button>Download</button>
+
+                </div>
+
+                <div class="report-item">
+
+                    <i class="fa-solid fa-file-excel"></i>
+
+                    <div>
+
+                        <h4>Payroll Summary</h4>
+
+                        <p>Generated on 03 July 2026</p>
+
+                    </div>
+
+                    <button>Download</button>
+
+                </div>
+
+                <div class="report-item">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <div>
+
+                        <h4>Attendance Report</h4>
+
+                        <p>Generated on 01 July 2026</p>
+
+                    </div>
+
+                    <button>Download</button>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <div class="section-title">
+
+                    <h2>⚡ Quick Actions</h2>
+
+                </div>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export Analytics
+
+                </button>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Generate Report
+
+                </button>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Email Report
+
+                </button>
+
+                <button class="action-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Analytics Settings
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= AI Recommendations ================= -->
+
+        <section class="recommendation-card">
+
+            <div class="section-title">
+
+                <h2>🤖 AI Recommendations</h2>
+
+            </div>
+
+            <ul class="recommendation-list">
+
+                <li>✅ Increase hiring for Engineering during the next quarter.</li>
+
+                <li>📅 Encourage employees to distribute leave requests more evenly.</li>
+
+                <li>💰 Review payroll incentives for top-performing teams.</li>
+
+                <li>📈 Maintain attendance above 95% to improve productivity.</li>
+
+                <li>🤝 Schedule additional onboarding sessions for new employees.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- ================= Footer ================= -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 HRGenie AI | Workforce Analytics Dashboard
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/analytics.js"></script>
+
+</body>
+
+</html>

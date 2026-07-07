@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HRGenie AI | Recruitment</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/recruitment.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <div>
+
+                <h2>HRGenie</h2>
+
+                <span>AI HRMS</span>
+
+            </div>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="recruitment.html">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Recruitment
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="interview.html">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                    AI Interview
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="employees.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Employees
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="payroll.html">
+
+                    <i class="fa-solid fa-money-check-dollar"></i>
+
+                    Payroll
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="leave.html">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    Leave
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="chatbot.html">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    HR Assistant
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="analytics.html">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Analytics
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Recruitment Dashboard</h1>
+
+                <p>AI Powered Candidate Management</p>
+
+            </div>
+
+            <div class="top-actions">
+
+                <input type="text"
+                    placeholder="Search Candidate...">
+
+                <button class="add-btn">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add Candidate
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <h4>Total Applicants</h4>
+
+                <h2>486</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>Shortlisted</h4>
+
+                <h2>92</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>Interviews</h4>
+
+                <h2>37</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h4>Selected</h4>
+
+                <h2>15</h2>
+
+            </div>
+
+        </section>
+
+        <!-- Upload + AI -->
+
+        <section class="recruitment-grid">
+
+            <!-- Resume Upload -->
+
+            <div class="upload-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    Upload Resume
+
+                </h2>
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-file-arrow-up"></i>
+
+                    <h3>Drag & Drop Resume</h3>
+
+                    <p>PDF, DOC, DOCX Supported</p>
+
+                    <button>
+
+                        Choose File
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- AI Analysis -->
+
+            <div class="analysis-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    AI Resume Analysis
+
+                </h2>
+
+                <div class="candidate">
+
+                    <h3>Rahul Sharma</h3>
+
+                    <p>
+
+                        <strong>Experience:</strong>
+
+                        4 Years
+
+                    </p>
+
+                    <p>
+
+                        <strong>Education:</strong>
+
+                        B.Tech CSE
+
+                    </p>
+
+                    <p>
+
+                        <strong>Skills:</strong>
+
+                        React, Node.js, MongoDB, JavaScript
+
+                    </p>
+
+                    <p>
+
+                        <strong>Summary:</strong>
+
+                        Strong Full Stack Developer with excellent frontend experience and leadership skills.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Match Score -->
+
+            <div class="score-card">
+
+                <h2>
+
+                    AI Match Score
+
+                </h2>
+
+                <div class="circle">
+
+                    94%
+
+                </div>
+
+                <h3>Excellent Match</h3>
+
+                <p>
+
+                    ⭐⭐⭐⭐⭐
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===== Recruitment Part 2 Starts Here ===== -->
+         <!-- ================= Candidate Table ================= -->
+
+<section class="candidate-section">
+
+    <div class="candidate-table">
+
+        <div class="section-title">
+
+            <h2>Candidate Pipeline</h2>
+
+            <button>View All</button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Candidate</th>
+                    <th>Role</th>
+                    <th>Experience</th>
+                    <th>AI Score</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+
+                        <div class="candidate-info">
+
+                            <img src="https://i.pravatar.cc/60?img=11">
+
+                            <div>
+
+                                <h4>Rahul Sharma</h4>
+
+                                <small>rahul@gmail.com</small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Frontend Developer</td>
+
+                    <td>4 Years</td>
+
+                    <td>
+
+                        <span class="score excellent">94%</span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="status shortlisted">
+
+                            Shortlisted
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <div class="candidate-info">
+
+                            <img src="https://i.pravatar.cc/60?img=5">
+
+                            <div>
+
+                                <h4>Priya Das</h4>
+
+                                <small>priya@gmail.com</small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>HR Executive</td>
+
+                    <td>3 Years</td>
+
+                    <td>
+
+                        <span class="score good">88%</span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="status interview">
+
+                            Interview
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <div class="candidate-info">
+
+                            <img src="https://i.pravatar.cc/60?img=15">
+
+                            <div>
+
+                                <h4>Amit Roy</h4>
+
+                                <small>amit@gmail.com</small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Backend Developer</td>
+
+                    <td>2 Years</td>
+
+                    <td>
+
+                        <span class="score average">79%</span>
+
+                    </td>
+
+                    <td>
+
+                        <span class="status pending">
+
+                            Pending
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- ================= AI Recommendation ================= -->
+
+    <div class="recommendation-card">
+
+        <h2>
+
+            🤖 AI Recommendation
+
+        </h2>
+
+        <div class="recommendation">
+
+            <h3>Rahul Sharma</h3>
+
+            <ul>
+
+                <li>✅ Excellent React & JavaScript Skills</li>
+
+                <li>✅ Strong Communication</li>
+
+                <li>✅ Leadership Experience</li>
+
+                <li>✅ Best Match for Frontend Team</li>
+
+                <li>⭐ Recommended for Final Round</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Hiring Progress ================= -->
+
+<section class="pipeline">
+
+    <div class="pipeline-card">
+
+        <h2>Hiring Pipeline</h2>
+
+        <div class="step">
+
+            <span>Applications</span>
+
+            <strong>486</strong>
+
+        </div>
+
+        <div class="step">
+
+            <span>AI Screened</span>
+
+            <strong>320</strong>
+
+        </div>
+
+        <div class="step">
+
+            <span>Shortlisted</span>
+
+            <strong>92</strong>
+
+        </div>
+
+        <div class="step">
+
+            <span>Interviewed</span>
+
+            <strong>37</strong>
+
+        </div>
+
+        <div class="step">
+
+            <span>Selected</span>
+
+            <strong>15</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== Recruitment Part 3 Starts Here ===== -->
+ <!-- ================= Bottom Grid ================= -->
+
+<section class="bottom-grid">
+
+    <!-- Upcoming Interviews -->
+
+    <div class="interview-card">
+
+        <div class="section-title">
+
+            <h2>Upcoming Interviews</h2>
+
+            <button>View Schedule</button>
+
+        </div>
+
+        <div class="interview-list">
+
+            <div class="interview-item">
+
+                <div class="time">
+
+                    <h3>09:30 AM</h3>
+
+                    <small>Today</small>
+
+                </div>
+
+                <div class="details">
+
+                    <h4>Rahul Sharma</h4>
+
+                    <p>Frontend Developer</p>
+
+                </div>
+
+                <span class="badge online">
+
+                    Online
+
+                </span>
+
+            </div>
+
+            <div class="interview-item">
+
+                <div class="time">
+
+                    <h3>11:00 AM</h3>
+
+                    <small>Today</small>
+
+                </div>
+
+                <div class="details">
+
+                    <h4>Priya Das</h4>
+
+                    <p>HR Executive</p>
+
+                </div>
+
+                <span class="badge offline">
+
+                    Office
+
+                </span>
+
+            </div>
+
+            <div class="interview-item">
+
+                <div class="time">
+
+                    <h3>02:30 PM</h3>
+
+                    <small>Today</small>
+
+                </div>
+
+                <div class="details">
+
+                    <h4>Amit Roy</h4>
+
+                    <p>Backend Developer</p>
+
+                </div>
+
+                <span class="badge online">
+
+                    Online
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+
+    <div class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <button>
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            Add Candidate
+
+        </button>
+
+        <button>
+
+            <i class="fa-solid fa-file-arrow-up"></i>
+
+            Upload Resume
+
+        </button>
+
+        <button>
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            Schedule Interview
+
+        </button>
+
+        <button>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Send Offer Letter
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+    <p>
+
+        © 2026 HRGenie AI | Recruitment Management System
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="js/recruitment.js"></script>
+
+</body>
+
+</html>
